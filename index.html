@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Filmes</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+    <script src="js/global.js" defer></script>
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#000000">
+</head>
+<body>
+   <div class="loader" id="loader" >
+        <div class="spinner"></div>
+        <p>Aguarde, carregando informações...</p>
+    </div>
+    <header class="header">
+        <div class="container header-conteudo">
+            <h1 class="logo"><span>Lista de Filmes</span></h1>
+            <nav class="menu">
+                <button id="botaoTema">Trocar tema</button>
+                <a href="#" id="inicio">Início</a>
+                <a href="#" id="filmes">Filmes</a>
+                <a href="#" id="series">Séries</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="pesquisa-section">
+            <div class="container pesquisa-conteudo">
+                <input type="text" id="campoPesquisa" placeholder="Pesquisar por filme">
+                <button class="pesquisa-button" id="botaoPesquisa">
+                    <img src="assets/icones/lupa.svg" alt="Pesquisar">
+                </button>
+            </div>
+        </section>
+        <select id="filtroGenero"></select>
+        <select id="filtroAno">
+            <option value="">Todos os anos</option>
+        </select>
+        <select id="filtroNota">
+            <option value="">Qualquer nota</option>
+            <option value="5">5+</option>
+            <option value="6">6+</option>
+            <option value="7">7+</option>
+            <option value="8">8+</option>
+        </select>
+        <select id="filtroPais">
+            <option value="">Todos os países</option>
+            <option value="US">Estados Unidos</option>
+            <option value="BR">Brasil</option>
+            <option value="KR">Coreia do Sul</option>
+            <option value="JP">Japão</option>
+            <option value="ES">Espanha</option>
+            <option value="FR">França</option>
+            <option value="GB">Reino Unido</option>
+        </select>
+        <section class="exibeFilme-section">
+            <div class="filmesGrid" id="filmesGrid"></div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>Desenvolvido por Francielle © 2026</p>
+    </footer>
+</body>
+</html>
